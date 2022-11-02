@@ -3,374 +3,254 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@drawable/gradient_drawable"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_drawable"
     tools:context=".HomeChat">
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/ngobrolTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="Ngobrol"
-        android:textSize="18pt"
+        android:layout_marginEnd="228dp"
         android:fontFamily="@font/redhatdisplay_regular"
-        app:layout_constraintTop_toTopOf="parent"
+        android:text="Ngobrol"
+        android:textColor="@color/white"
+        android:textSize="15pt"
         android:textStyle="bold"
-        android:textColor="@color/white" />
-
+        app:layout_constraintBottom_toBottomOf="@id/kuyTxt"
+        app:layout_constraintEnd_toEndOf="parent" />
     <TextView
         android:id="@+id/kuyTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="10dp"
         android:fontFamily="@font/redhatdisplay_regular"
         android:text="Kuy"
         android:textColor="@color/pink"
-        android:textSize="18pt"
+        android:textSize="15pt"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/ngobrolTxt"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
 
     <ImageView
         android:id="@+id/backward"
-        android:layout_width="130px"
-        android:layout_height="120px"
-        android:onClick="handleSetting"
+        android:layout_width="90px"
+        android:layout_height="90px"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="16dp"
+        android:onClick="handlesettings"
         android:src="@drawable/dot"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="345dp"
-        tools:layout_editor_absoluteY="7dp" />
+        app:layout_constraintStart_toEndOf="@id/ngobrolTxt"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/imvCircularWithStroke1"
-        android:layout_width="109dp"
-        android:layout_marginLeft="20dp"
-        android:layout_height="106dp"
-        android:layout_marginEnd="300dp"
-        android:padding="5dp"
-        android:src="@drawable/man"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="30dp"
-        app:layout_constraintTop_toBottomOf="@id/ngobrolTxt"
-        app:shapeAppearanceOverlay="@style/Circular"
-        app:strokeColor="#00BCD4"
-        app:strokeWidth="5dp"
-        tools:layout_editor_absoluteY="91dp" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imvCircularWithStroke"
+                android:layout_width="109dp"
+                android:layout_height="106dp"
+                android:layout_marginBottom="500dp"
+                android:padding="5dp"
+                android:src="@drawable/man"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.139"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:shapeAppearanceOverlay="@style/Circular"
+                app:strokeColor="#00BCD4"
+                app:strokeWidth="5dp" />
 
+        <TextView
+            android:layout_width="155dp"
+            android:layout_height="34dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="552dp"
+            android:fontFamily="@font/redhatdisplay_regular"
+            android:onClick="handlechat"
+            android:text="Juned"
+            android:textColor="@color/white"
+            android:textSize="12pt"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.754"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
     <TextView
-        android:id="@+id/juned"
-        android:layout_width="274dp"
-        android:layout_height="40dp"
+        android:layout_width="195dp"
+        android:layout_height="37dp"
         android:layout_gravity="center_vertical"
+        android:layout_marginBottom="500dp"
         android:fontFamily="@font/redhatdisplay_regular"
-        android:text="Juned"
-        android:onClick="handlepc"
-        app:layout_constraintLeft_toRightOf="@id/imvCircularWithStroke1"
-        app:layout_constraintTop_toBottomOf="@id/kuyTxt"
-        android:layout_marginTop="50dp"
-        android:textColor="@color/white"
-        android:textSize="12pt"
-        tools:layout_editor_absoluteX="111dp"
-        tools:layout_editor_absoluteY="100dp" />
-
-    <TextView
-        android:id="@+id/nongkrong"
-        android:layout_width="274dp"
-        android:layout_height="40dp"
-        android:layout_gravity="center_vertical"
-        android:fontFamily="@font/redhatdisplay_regular"
-        app:layout_constraintLeft_toRightOf="@id/imvCircularWithStroke1"
-        app:layout_constraintTop_toBottomOf="@id/juned"
         android:text="Bro Nongkrong Yuk"
         android:textColor="@color/white"
         android:textSize="8pt"
-        tools:layout_editor_absoluteX="111dp"
-        tools:layout_editor_absoluteY="140dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.893"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imvCircularWithStroke2"
-        android:layout_marginLeft="20dp"
         android:layout_width="109dp"
         android:layout_height="106dp"
-        android:layout_marginEnd="300dp"
+        android:layout_marginEnd="260dp"
+        android:layout_marginBottom="372dp"
         android:padding="5dp"
-        app:layout_constraintTop_toBottomOf="@id/imvCircularWithStroke1"
         android:src="@drawable/man"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.81"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:shapeAppearanceOverlay="@style/Circular"
         app:strokeColor="#00BCD4"
-        app:strokeWidth="5dp"
-        tools:layout_editor_absoluteY="197dp" />
+        app:strokeWidth="5dp" />
 
     <TextView
-        android:id="@+id/ligma"
-        android:layout_width="274dp"
-        android:layout_height="40dp"
+        android:layout_width="145dp"
+        android:layout_height="35dp"
         android:layout_gravity="center_vertical"
+        android:layout_marginBottom="428dp"
         android:fontFamily="@font/redhatdisplay_regular"
         android:text="Ligma"
-        app:layout_constraintLeft_toRightOf="@id/imvCircularWithStroke2"
-        app:layout_constraintTop_toBottomOf="@id/nongkrong"
         android:textColor="@color/white"
-        android:layout_marginTop="25dp"
         android:textSize="12pt"
-        tools:layout_editor_absoluteX="111dp"
-        tools:layout_editor_absoluteY="200dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.744"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <TextView
-        android:id="@+id/bals"
-        android:layout_width="274dp"
-        android:layout_height="40dp"
+        android:layout_width="164dp"
+        android:layout_height="36dp"
         android:layout_gravity="center_vertical"
+        android:layout_marginBottom="372dp"
         android:fontFamily="@font/redhatdisplay_regular"
-        app:layout_constraintLeft_toRightOf="@id/imvCircularWithStroke2"
-        app:layout_constraintTop_toBottomOf="@id/ligma"
         android:text="Bals"
         android:textColor="@color/white"
         android:textSize="8pt"
-        tools:layout_editor_absoluteX="111dp"
-        tools:layout_editor_absoluteY="240dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.801"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imvCircularWithStroke3"
-        android:layout_marginLeft="20dp"
         android:layout_width="109dp"
         android:layout_height="106dp"
-        android:layout_marginEnd="300dp"
+        android:layout_marginEnd="260dp"
+        android:layout_marginBottom="242dp"
         android:padding="5dp"
-        app:layout_constraintTop_toBottomOf="@id/imvCircularWithStroke2"
-        android:src="@drawable/apink"
+        android:src="@drawable/man"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.81"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:shapeAppearanceOverlay="@style/Circular"
         app:strokeColor="#00BCD4"
-        app:strokeWidth="5dp"
-        tools:layout_editor_absoluteY="197dp" />
+        app:strokeWidth="5dp" />
 
     <TextView
-        android:id="@+id/apink"
-        android:layout_width="274dp"
-        android:layout_height="40dp"
+        android:layout_width="145dp"
+        android:layout_height="35dp"
         android:layout_gravity="center_vertical"
+        android:layout_marginBottom="315dp"
         android:fontFamily="@font/redhatdisplay_regular"
-        android:text="Apink"
-        app:layout_constraintLeft_toRightOf="@id/imvCircularWithStroke3"
-        app:layout_constraintTop_toBottomOf="@id/bals"
+        android:text="Shoppee Security"
         android:textColor="@color/white"
-        android:layout_marginTop="25dp"
         android:textSize="12pt"
-        tools:layout_editor_absoluteX="111dp"
-        tools:layout_editor_absoluteY="200dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.744"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <TextView
-        android:id="@+id/cb"
-        android:layout_width="274dp"
-        android:layout_height="40dp"
+        android:layout_width="164dp"
+        android:layout_height="36dp"
         android:layout_gravity="center_vertical"
+        android:layout_marginBottom="272dp"
         android:fontFamily="@font/redhatdisplay_regular"
-        app:layout_constraintLeft_toRightOf="@id/imvCircularWithStroke3"
-        app:layout_constraintTop_toBottomOf="@id/apink"
-        android:text="Comeback"
+        android:text="Jangan Beri Kode.."
         android:textColor="@color/white"
         android:textSize="8pt"
-        tools:layout_editor_absoluteX="111dp"
-        tools:layout_editor_absoluteY="240dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.801"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imvCircularWithStroke4"
-        android:layout_marginLeft="20dp"
         android:layout_width="109dp"
         android:layout_height="106dp"
-        android:layout_marginEnd="300dp"
+        android:layout_marginEnd="260dp"
+        android:layout_marginBottom="132dp"
         android:padding="5dp"
-        app:layout_constraintTop_toBottomOf="@id/imvCircularWithStroke3"
-        android:src="@drawable/kangta"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:shapeAppearanceOverlay="@style/Circular"
-        app:strokeColor="#00BCD4"
-        app:strokeWidth="5dp"
-        tools:layout_editor_absoluteY="197dp" />
-
-    <TextView
-        android:id="@+id/kangta"
-        android:layout_width="274dp"
-        android:layout_height="40dp"
-        android:layout_gravity="center_vertical"
-        android:fontFamily="@font/redhatdisplay_regular"
-        android:text="Kangta"
-        app:layout_constraintLeft_toRightOf="@id/imvCircularWithStroke4"
-        app:layout_constraintTop_toBottomOf="@id/cb"
-        android:textColor="@color/white"
-        android:layout_marginTop="25dp"
-        android:textSize="12pt"
-        tools:layout_editor_absoluteX="111dp"
-        tools:layout_editor_absoluteY="200dp" />
-
-    <TextView
-        android:id="@+id/iya"
-        android:layout_width="274dp"
-        android:layout_height="40dp"
-        android:layout_gravity="center_vertical"
-        android:fontFamily="@font/redhatdisplay_regular"
-        app:layout_constraintLeft_toRightOf="@id/imvCircularWithStroke4"
-        app:layout_constraintTop_toBottomOf="@id/kangta"
-        android:text="Iya"
-        android:textColor="@color/white"
-        android:textSize="8pt"
-        tools:layout_editor_absoluteX="111dp"
-        tools:layout_editor_absoluteY="240dp" />
-
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/imvCircularWithStroke5"
-        android:layout_marginLeft="20dp"
-        android:layout_width="109dp"
-        android:layout_height="106dp"
-        android:layout_marginEnd="300dp"
-        android:padding="5dp"
-        app:layout_constraintTop_toBottomOf="@id/imvCircularWithStroke4"
-        android:src="@drawable/nct"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:shapeAppearanceOverlay="@style/Circular"
-        app:strokeColor="#00BCD4"
-        app:strokeWidth="5dp"
-        tools:layout_editor_absoluteY="197dp" />
-
-    <TextView
-        android:id="@+id/nct"
-        android:layout_width="274dp"
-        android:layout_height="40dp"
-        android:layout_gravity="center_vertical"
-        android:fontFamily="@font/redhatdisplay_regular"
-        android:text="NCT"
-        app:layout_constraintLeft_toRightOf="@id/imvCircularWithStroke5"
-        app:layout_constraintTop_toBottomOf="@id/iya"
-        android:textColor="@color/white"
-        android:layout_marginTop="25dp"
-        android:textSize="12pt"
-        tools:layout_editor_absoluteX="111dp"
-        tools:layout_editor_absoluteY="200dp" />
-
-    <TextView
-        android:id="@+id/otw"
-        android:layout_width="274dp"
-        android:layout_height="40dp"
-        android:layout_gravity="center_vertical"
-        android:fontFamily="@font/redhatdisplay_regular"
-        app:layout_constraintLeft_toRightOf="@id/imvCircularWithStroke5"
-        app:layout_constraintTop_toBottomOf="@id/nct"
-        android:text="otw"
-        android:textColor="@color/white"
-        android:textSize="8pt"
-        tools:layout_editor_absoluteX="111dp"
-        tools:layout_editor_absoluteY="240dp" />
-
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/imvCircularWithStroke6"
-        android:layout_marginLeft="20dp"
-        android:layout_width="109dp"
-        android:layout_height="106dp"
-        android:layout_marginEnd="300dp"
-        android:padding="5dp"
-        app:layout_constraintTop_toBottomOf="@id/imvCircularWithStroke5"
         android:src="@drawable/man"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.81"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:shapeAppearanceOverlay="@style/Circular"
         app:strokeColor="#00BCD4"
-        app:strokeWidth="5dp"
-        tools:layout_editor_absoluteY="197dp" />
+        app:strokeWidth="5dp" />
 
     <TextView
-        android:id="@+id/brian"
-        android:layout_width="274dp"
-        android:layout_height="40dp"
+        android:layout_width="145dp"
+        android:layout_height="35dp"
         android:layout_gravity="center_vertical"
+        android:layout_marginBottom="205dp"
         android:fontFamily="@font/redhatdisplay_regular"
-        android:text="Brian"
-        app:layout_constraintLeft_toRightOf="@id/imvCircularWithStroke6"
-        app:layout_constraintTop_toBottomOf="@id/otw"
+        android:text="Shoppee Security"
         android:textColor="@color/white"
-        android:layout_marginTop="25dp"
         android:textSize="12pt"
-        tools:layout_editor_absoluteX="111dp"
-        tools:layout_editor_absoluteY="200dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.744"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <TextView
-        android:id="@+id/masa"
-        android:layout_width="274dp"
-        android:layout_height="40dp"
+        android:layout_width="164dp"
+        android:layout_height="36dp"
         android:layout_gravity="center_vertical"
+        android:layout_marginBottom="162dp"
         android:fontFamily="@font/redhatdisplay_regular"
-        app:layout_constraintLeft_toRightOf="@id/imvCircularWithStroke6"
-        app:layout_constraintTop_toBottomOf="@id/brian"
-        android:text="masa iya"
+        android:text="Jangan Beri Kode.."
         android:textColor="@color/white"
         android:textSize="8pt"
-        tools:layout_editor_absoluteX="111dp"
-        tools:layout_editor_absoluteY="240dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.801"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/imvCircularWithStroke7"
-        android:layout_marginLeft="20dp"
-        android:layout_width="109dp"
-        android:layout_height="106dp"
-        android:layout_marginEnd="300dp"
-        android:padding="5dp"
-        app:layout_constraintTop_toBottomOf="@id/imvCircularWithStroke6"
-        android:src="@drawable/man"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:shapeAppearanceOverlay="@style/Circular"
-        app:strokeColor="#00BCD4"
-        app:strokeWidth="5dp"
-        tools:layout_editor_absoluteY="197dp" />
-
-    <TextView
-        android:id="@+id/dion"
-        android:layout_width="274dp"
-        android:layout_height="40dp"
-        android:layout_gravity="center_vertical"
-        android:fontFamily="@font/redhatdisplay_regular"
-        android:text="Dion"
-        app:layout_constraintLeft_toRightOf="@id/imvCircularWithStroke7"
-        app:layout_constraintTop_toBottomOf="@id/masa"
-        android:textColor="@color/white"
-        android:layout_marginTop="25dp"
-        android:textSize="12pt"
-        tools:layout_editor_absoluteX="111dp"
-        tools:layout_editor_absoluteY="200dp" />
-
-    <TextView
-        android:id="@+id/gtw"
-        android:layout_width="274dp"
-        android:layout_height="40dp"
-        android:layout_gravity="center_vertical"
-        android:fontFamily="@font/redhatdisplay_regular"
-        app:layout_constraintLeft_toRightOf="@id/imvCircularWithStroke7"
-        app:layout_constraintTop_toBottomOf="@id/dion"
-        android:text="masa iya"
-        android:textColor="@color/white"
-        android:textSize="8pt"
-        tools:layout_editor_absoluteX="111dp"
-        tools:layout_editor_absoluteY="240dp" />
-
-
-
-
-    <!--    <ScrollView-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"/>-->
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/fab"
+        android:layout_width="82dp"
+        android:layout_height="84dp"
+        android:layout_gravity="end|bottom"
+        android:onClick="handleLogin"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/keluar"
+        android:src="@drawable/circle"
+        tools:layout_editor_absoluteX="313dp"
+        tools:layout_editor_absoluteY="800dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:onClick="handleKeluar"/>
+        app:layout_constraintHorizontal_bias="0.920"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
 
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
