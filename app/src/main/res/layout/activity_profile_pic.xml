@@ -21,6 +21,7 @@
         android:id="@+id/pinkCircle"
         android:layout_width="120px"
         android:layout_height="120px"
+        android:onClick="handleChangeAvatar"
         android:src="@drawable/circle"
         app:layout_constraintEnd_toEndOf="@id/profilePic"
         app:layout_constraintBottom_toBottomOf="@id/profilePic"/>
@@ -29,10 +30,12 @@
         android:layout_width="100px"
         android:layout_height="100px"
         android:src="@drawable/ic_baseline_edit_24"
-        app:layout_constraintStart_toStartOf="@id/pinkCircle"
+        app:layout_constraintBottom_toBottomOf="@id/pinkCircle"
         app:layout_constraintEnd_toEndOf="@id/pinkCircle"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/pinkCircle"
         app:layout_constraintTop_toTopOf="@id/pinkCircle"
-        app:layout_constraintBottom_toBottomOf="@id/pinkCircle"/>
+        app:layout_constraintVertical_bias="0.875" />
 
     <ImageView
         android:layout_width="320px"
@@ -61,10 +64,12 @@
 
 
     <TextView
+        android:id="@+id/lewati"
         android:visibility="visible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Lewati"
+        android:onClick="handleHomechat"
         android:fontFamily="@font/redhatdisplay_regular"
         android:textStyle="bold"
         android:textSize="12pt"
@@ -75,6 +80,7 @@
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/lanjut"
         android:visibility="invisible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -91,6 +97,7 @@
             android:fontFamily="@font/redhatdisplay_regular"
             android:textStyle="bold"
             android:textSize="12pt"
+            android:onClick="handleHomechat"
             android:textColor="@color/white"
             android:layout_marginStart="18dp"
             android:layout_marginEnd="18dp"

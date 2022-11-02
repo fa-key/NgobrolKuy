@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_drawable"
+    tools:context=".PersonalChat">
+
+    <TextView
+        android:layout_width="118dp"
+        android:layout_height="42dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="652dp"
+        android:fontFamily="@font/redhatdisplay_regular"
+        android:text="Juned"
+        android:textColor="@color/white"
+        android:textSize="12pt"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.689"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/inputList"
+        android:layout_width="278dp"
+        android:layout_height="582dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="48dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_profile">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20px"
+            android:backgroundTint="@color/white"
+            app:cardCornerRadius="40dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Lagi Dimana Bro"
+                android:textColor="@color/pink"
+                android:textSize="8pt" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="155dp"
+            android:layout_marginBottom="20px"
+            android:backgroundTint="@color/pink"
+            app:cardCornerRadius="40dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Di kamar ni"
+                android:textColor="@color/white"
+                android:textSize="8pt" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20px"
+            android:backgroundTint="@color/white"
+
+            app:cardCornerRadius="40dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Bro nongkrong yuk"
+                android:textColor="@color/pink"
+                android:textSize="8pt" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="700px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="900px"
+            android:backgroundTint="@color/white"
+
+            app:cardCornerRadius="40dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Tuliskan Sesuatu"
+                android:textColor="@color/pink"
+                android:textSize="8pt" />
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/backward"
+        android:layout_width="130px"
+        android:layout_height="120px"
+        android:layout_marginBottom="656dp"
+        android:onClick="handleback"
+        android:src="@drawable/panah"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img_profile"
+        android:layout_width="94dp"
+        android:layout_height="92dp"
+        android:layout_marginBottom="608dp"
+        android:padding="5dp"
+        android:src="@drawable/man"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.283"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:shapeAppearanceOverlay="@style/Circular"
+        app:strokeWidth="5dp" />
+
+
+
+    <ImageView
+        android:id="@+id/send"
+        android:layout_width="130px"
+        android:layout_height="120px"
+        android:layout_marginBottom="24dp"
+        android:onClick="handleback"
+        android:src="@drawable/circle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.922"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

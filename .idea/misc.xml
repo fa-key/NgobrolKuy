@@ -3,6 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/HP/NgobrolKuy/app/src/main/res/drawable/circle.xml" value="0.1005" />
+        <entry key="..\:/Users/HP/NgobrolKuy/app/src/main/res/drawable/rounded_outline.xml" value="0.1005" />
+        <entry key="..\:/Users/HP/NgobrolKuy/app/src/main/res/layout/activity_confirmpw.xml" value="0.22" />
+        <entry key="..\:/Users/HP/NgobrolKuy/app/src/main/res/layout/activity_forgetpw.xml" value="0.1" />
+        <entry key="..\:/Users/HP/NgobrolKuy/app/src/main/res/layout/activity_home_chat.xml" value="0.12" />
+        <entry key="..\:/Users/HP/NgobrolKuy/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Users/HP/NgobrolKuy/app/src/main/res/layout/activity_newpw.xml" value="0.1796875" />
+        <entry key="..\:/Users/HP/NgobrolKuy/app/src/main/res/layout/activity_personal_chat.xml" value="0.12590579710144928" />
+        <entry key="..\:/Users/HP/NgobrolKuy/app/src/main/res/layout/activity_profile_pic.xml" value="0.1796875" />
+        <entry key="..\:/Users/HP/NgobrolKuy/app/src/main/res/layout/activity_register.xml" value="0.1" />
+        <entry key="..\:/Users/HP/NgobrolKuy/app/src/main/res/layout/activity_settings.xml" value="0.1796875" />
+        <entry key="..\:/Users/HP/NgobrolKuy/app/src/main/res/layout/activity_splash.xml" value="0.1" />
         <entry key="..\:/Users/Komp/AndroidStudioProjects/NgobrolKuy/app/src/main/res/drawable/circle.xml" value="0.2995" />
         <entry key="..\:/Users/Komp/AndroidStudioProjects/NgobrolKuy/app/src/main/res/drawable/gradient_drawable.xml" value="0.268" />
         <entry key="..\:/Users/Komp/AndroidStudioProjects/NgobrolKuy/app/src/main/res/drawable/ic_baseline_edit_64.xml" value="0.2995" />
